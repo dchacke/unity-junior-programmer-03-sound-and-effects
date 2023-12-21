@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         // Make player jump up
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerRb.AddForce(Vector3.up * 1000);
+            playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
         }
     }
 }
