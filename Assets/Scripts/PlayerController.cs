@@ -14,14 +14,15 @@ public class PlayerController : MonoBehaviour
         // field in the Unity editor. Then the line below
         // can be removed.
         playerRb = GetComponent<Rigidbody>();
-
-        // Make player jump up
-        playerRb.AddForce(Vector3.up * 1000);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // Make player jump up
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerRb.AddForce(Vector3.up * 1000);
+        }
     }
 }
