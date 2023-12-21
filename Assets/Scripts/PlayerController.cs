@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float jumpForce = 10;
     public float gravityModifier = 1;
+    public bool isOnGround = true;
 
     private Rigidbody playerRb;
 
@@ -25,9 +26,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Make player jump up
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isOnGround = false;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        isOnGround = true;
     }
 }
