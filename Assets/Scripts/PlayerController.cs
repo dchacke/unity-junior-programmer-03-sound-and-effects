@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
     public float jumpForce = 10;
+    public float gravityModifier = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,8 @@ public class PlayerController : MonoBehaviour
         // field in the Unity editor. Then the line below
         // can be removed.
         playerRb = GetComponent<Rigidbody>();
+
+        Physics.gravity *= gravityModifier;
     }
 
     // Update is called once per frame
