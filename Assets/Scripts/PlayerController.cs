@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
+    public float jumpForce = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class PlayerController : MonoBehaviour
         // Make player jump up
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 }
