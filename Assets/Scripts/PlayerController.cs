@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public bool gameOver = false;
     public ParticleSystem explosionParticle;
     public ParticleSystem dirtParticle;
+    public AudioClip jumpSound;
+    public AudioClip crashSound;
 
     private Rigidbody playerRb;
     private Animator playerAnim;
