@@ -21,8 +21,4 @@ public class RepeatBackgroundX : MonoBehaviour
             transform.position = startPos;
         }
     }
-
- 
 }
-
-
