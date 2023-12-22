@@ -18,7 +18,7 @@ public class SpawnManagerX : MonoBehaviour
     }
 
     // Spawn obstacles
-    void SpawnObjects ()
+    void SpawnObjects()
     {
         // Set random spawn location and random object index
         Vector3 spawnLocation = new Vector3(30, Random.Range(5, 15), 0);
@@ -29,6 +29,5 @@ public class SpawnManagerX : MonoBehaviour
         {
             Instantiate(objectPrefabs[index], spawnLocation, objectPrefabs[index].transform.rotation);
         }
-
     }
 }
